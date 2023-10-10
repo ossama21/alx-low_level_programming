@@ -5,10 +5,10 @@
 #include <string.h>
 
 /**
- * struct Dog - Dog structure
- * @name: Name
- * @age: The age
- * @owner: The owner
+ * struct dog - dog structure
+ * @name: name
+ * @age: age
+ * @owner: owner
  *
  * Description: the dog's structure
  */
