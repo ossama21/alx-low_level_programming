@@ -1,5 +1,5 @@
-#ifndef __HEADER__
-#define __HEARDER__
+#ifndef LISTS_H
+#define LISTS_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -11,9 +11,9 @@ typedef struct list
 	char *str;
 	int len;
 	struct list *next;
-}list_t;
+} list_t;
 
-/* Function prototypes */
+
 int _putchar(char c);
 list_t *add_node_end(list_t **head, const char *str);
 size_t print_list(const list_t *h);
