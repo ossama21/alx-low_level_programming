@@ -1,11 +1,11 @@
 extern	printf		; the C function, to be called
 section .data
 	hello db "Hello, Holberton",0	; Define the string to be printed
-	format db "%s",10,0	; Define the format string with a newline character
+	format db "%s",10,0		; Define the format string with a newline character
 
 section .text
 	global main		; Entry point for the program
-	extern printf	; Declare the printf function from the C library
+	extern printf		; Declare the printf function from the C library
 
 main:
 	push rbp	;Save the base pointer
