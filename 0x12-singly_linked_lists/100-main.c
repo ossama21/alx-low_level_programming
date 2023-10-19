@@ -1,6 +1,12 @@
 #include <stdio.h>
 
 /**
+ * print_mess - Apply the constructor attribute to myStartupFun() so that it
+ * is executed before main()
+ */
+void print_mess(void) __attribute__((constructor));
+
+/**
  * main - check the code
  *
  * Return: Always 0.
