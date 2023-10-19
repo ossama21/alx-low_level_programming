@@ -8,7 +8,7 @@ section .text
 	extern printf	; Declare the printf function from the C library
 
 main:
-	push rbp;	 Save the base pointer
+	push rbp	;Save the base pointer
 	mov rdi, format	; Load the address of the format string into rdi
 	mov rsi, hello	; Load the address of the hello string into rsi
 	call printf	; Call the printf function to print the formatted string
