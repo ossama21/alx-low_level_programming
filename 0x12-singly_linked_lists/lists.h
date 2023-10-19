@@ -6,6 +6,15 @@
 #include <string.h>
 #include <stddef.h>
 
+/**
+ * struct list - singgly lenked list
+ * @str: string
+ * @len: length of the string
+ * @next: Points to the next node
+ *
+ * Description: Structure
+ */
+
 typedef struct list
 {
 	char *str;
