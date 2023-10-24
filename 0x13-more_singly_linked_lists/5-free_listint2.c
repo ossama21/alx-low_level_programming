@@ -5,18 +5,16 @@
  *
  * @head: pointer to a pointer to the head of the list.
  */
-
 void free_listint2(listint_t **head)
 {
-	listint_t *next, *h;
+	listint_t *next;
 
 	if (head == NULL)
 		return;
-	h = *head;
-	while (h != NULL)
+	while (*head != NULL)
 	{
-		next = (h)->next;
-		free(h);
-		h = next;
+		next = (*head)->next;
+		free(*head);
+		*head = next;
 	}
 }
