@@ -19,16 +19,16 @@ int check_error(int error, char *fname, int fd)
 	{
 		case 97:
 			dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-			exit(error);
+			exit(97);
 		case 98:
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", fname);
-			exit(error);
+			exit(98);
 		case 99:
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", fname);
-			exit(error);
+			exit(99);
 		case 100:
 			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
-			exit(error);
+			exit(100);
 		default:
 			return (0);
 	}
