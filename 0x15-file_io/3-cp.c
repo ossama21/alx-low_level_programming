@@ -57,8 +57,6 @@ int main(int argc, char *argv[])
 	if (file_from == -1)
 		check_error(98, argv[1], file_from);
 
-
-
 	file_to  = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (file_to == -1)
 		check_error(99, argv[2], file_to);
@@ -66,7 +64,7 @@ int main(int argc, char *argv[])
 	while ((bytes_read = read(file_from, buffer, BUFFER_SIZE)) != 0)
 	{
 		if (bytes_read == -1)
-			check_error(99, argv[1], file_from);
+			check_error(98, argv[1], file_from);
 
 		bytes_written = write(file_to, buffer, bytes_read);
 		if (bytes_written == -1)
@@ -76,10 +74,10 @@ int main(int argc, char *argv[])
 
 	close_from = close(file_from);
 	if (close_from == -1)
-		check_error(100, argv[1], close_from);
+		check_error(100, argv[1], file_from);
 
 	close_to = close(file_to);
 	if (close_to == -1)
-		check_error(100, argv[2], close_to);
+		check_error(100, argv[2], file_to);
 	return (0);
 }
