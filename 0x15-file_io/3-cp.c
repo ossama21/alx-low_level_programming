@@ -55,22 +55,22 @@ int main(int argc, char *argv[])
 
 	file_from = open(argv[1], O_RDONLY);
 	if (file_from == -1)
-		check_error(98, argv[1], 0);
+		check_error(98, argv[1], file_from);
 
 
 
 	file_to  = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (file_to == -1)
-		check_error(99, argv[2], 0);
+		check_error(99, argv[2], file_to);
 
 	while ((bytes_read = read(file_from, buffer, BUFFER_SIZE)) != 0)
 	{
 		if (bytes_read == -1)
-			check_error(99, argv[1], 0);
+			check_error(99, argv[1], file_from);
 
 		bytes_written = write(file_to, buffer, bytes_read);
 		if (bytes_written == -1)
-			check_error(99, argv[2], 0);
+			check_error(99, argv[2], file_to);
 
 	}
 
