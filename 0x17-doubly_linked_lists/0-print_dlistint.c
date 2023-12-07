@@ -9,15 +9,17 @@
 
 size_t print_dlistint(const dlistint_t *h)
 {
-	size_t nodes = 0;
-	dlistint_t *current = h;
+	size_t n = 0;
+	const dlistint_t *head = h;
 
-	while (current != NULL)
+	if (h == NULL)
+		return (0);
+
+	while (head != NULL)
 	{
-		printf("-> %d", current->n);
-		nodes++;
-		current = current->next;
+		printf("%d\n", head->n);
+		head = head->next;
+		n++;
 	}
-
-	return (nodesi);
+	return (n);
 }
